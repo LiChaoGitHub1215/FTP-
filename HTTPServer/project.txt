@@ -1,0 +1,34 @@
+一. HTTPServer v3.0 
+
+  1. 功能 ： 
+	  【1】 HTTPServer部分 
+				* 获取http请求
+				* 解析http请求
+				* 将请求发送给 WebFrame
+				* 从数WebFrame接收据信息
+				* 将数据信息组织为Response发送给客户端
+		
+		【2】 WebFrame部分
+				* 从 httpserver 获取具体请求
+				* 根据请求进行逻辑或者数据处理
+				* 将数据资源发送给httpserver
+  
+	2. 升级
+
+	  【1】httpserver与应用程序分离，各自独立
+		【2】独立开发，降低相互干扰，采用各自配置的模式
+		【3】在后端应用程序中优化了数据的处理模型
+
+  3. HTTPServer 
+
+	   包含文件 ：
+		     * HTTPServer.py   主体程序
+				 * config.py  配置文件
+
+	4. WebFrame
+
+		 包含文件 ：
+				 * WebFrame.py  主体程序
+				 * settings.py  配置文件
+				 * views.py     数据处理方法模块
+				 * static目录   存放静态网页
